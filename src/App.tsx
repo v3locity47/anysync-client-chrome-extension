@@ -1,9 +1,12 @@
 import React from "react";
-import logo from "./logo.svg";
-
+import { GoogleSignInButton } from "./components/GoogleSignIn";
+import { UserSlab } from "./components/UserSlab";
 function App() {
   return (
-    <div className="container mx-auto px-4 bg-slate-700 rounded-md">aswe</div>
+    <div className="container items-center justify-center basis-full mx-auto px-4 bg-black-900 rounded-md flex h-1/2 min-h-[60vh]">
+      {/* <GoogleSignInButton /> */}
+      <UserSlab />
+    </div>
   );
 }
 
