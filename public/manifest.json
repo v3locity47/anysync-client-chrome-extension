@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "AnySync",
+  "description": "Sync any media with your friends",
+  "version": "1.0",
+  "permissions": ["activeTab", "webNavigation"],
+  "action": {
+    "default_popup": "index.html",
+    "default_title": "Open the popup"
+  }
+}
