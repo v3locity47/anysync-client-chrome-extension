@@ -5,7 +5,7 @@ import { Switch, Route } from "wouter";
 
 export const Navigation = () => {
   return (
-    <div className="container grow flex flex-col margin-8 content-start items-center bg-black-800 rounded-md p-6">
+    <div className="container grow flex flex-col margin-8 content-start items-center bg-black-800 rounded-md p-6 mt-4">
       <NavigaitonTabs />
       <Switch>
         <Route path="/room" component={RoomPage}></Route>

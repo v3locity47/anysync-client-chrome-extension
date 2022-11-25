@@ -1,10 +1,11 @@
 import axios from "axios";
 import { AxiosRequestConfig } from "axios";
 import Cookies from "js-cookie";
-const apiUrl =
-  process.env.NODE_ENV === "production"
-    ? process.env.REACT_APP_PROD_API_ENDPOINT
-    : process.env.REACT_APP_DEV_API_ENDPOINT;
+// const apiUrl =
+//   process.env.NODE_ENV === "production"
+//     ? process.env.REACT_APP_PROD_API_ENDPOINT
+//     : process.env.REACT_APP_DEV_API_ENDPOINT;
+const apiUrl = "http://localhost:8000";
 
 axios.defaults.withCredentials = true;
 const instance = axios.create({

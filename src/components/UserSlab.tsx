@@ -3,12 +3,12 @@ import img1 from "../../public/22.jpg";
 import { HttpClient } from "../config/httpClient";
 import { ButtonWithIcon } from "./ButtonIconWrapper";
 
-type icons = {
+type ButtonIconsWithHandlers = {
   Icon: FunctionComponent;
   handler: () => void;
 };
 interface Props {
-  iconsWithHandlers: Array<icons>;
+  iconsWithHandlers: Array<ButtonIconsWithHandlers>;
 }
 
 const data = {
@@ -19,12 +19,9 @@ const data = {
 
 export const UserSlab = ({ iconsWithHandlers }: Props) => {
   return (
-    <div className="grow flex flex-row border m-1 p-2 rounded-full">
-      <img
-        className="rounded-full h-16 w-16 bg-black-900"
-        src={data.imageUrl}
-      />
-      <div className="self-center mx-3.5">
+    <div className="grow flex flex-row m-1 p-2 rounded-full  hover:bg-black-500 duration-300">
+      <img className="rounded-full h-16 w-16" src={data.imageUrl} />
+      <div className="flex self-center mx-3.5">
         <span className="text-2xl self-baseline text-white">
           {data.username}
         </span>
@@ -32,10 +29,10 @@ export const UserSlab = ({ iconsWithHandlers }: Props) => {
           {data.name}
         </span>
 
-        <span className="ml-16">
+        <span className="flex ml-16 place-self-center">
           {iconsWithHandlers.map(({ Icon, handler }) => {
             return (
-              <button className="mx-1" onClick={handler}>
+              <button className="mr-1" onClick={handler}>
                 <Icon />
               </button>
             );
