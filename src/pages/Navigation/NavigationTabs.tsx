@@ -16,7 +16,7 @@ export const NavigaitonTabs = () => {
           Room
         </button>
       </Link>
-      <Link href="/friends">
+      <Link href="/manage/friends">
         <button
           className={
             location === "/friends"
@@ -27,7 +27,7 @@ export const NavigaitonTabs = () => {
           Friends
         </button>
       </Link>
-      <Link href="requests">
+      <Link href="manage/requests">
         <button
           className={
             location === "/requests"

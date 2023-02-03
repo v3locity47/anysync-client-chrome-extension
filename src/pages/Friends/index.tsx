@@ -1,15 +1,15 @@
 import { UserSlab } from "../../components/UserSlab";
 import { WatchIcon } from "../../components/icons";
+import { socket } from "../../config/socketClient";
 import { useGetUserProfile } from "../../hooks/userHooks";
-import { useQueryClient } from "@tanstack/react-query";
 
 export const FriendsPage = () => {
-  const { data: userData } = useGetUserProfile();
+  const { isSuccess, data: userData } = useGetUserProfile();
   const arr = [
     {
       Icon: WatchIcon,
       handler: () => {
-        console.log("Hi");
+        socket.emit("room:send-invite", userData._id);
       },
     },
   ];

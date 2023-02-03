@@ -1,3 +1,4 @@
 import { WatchIcon } from "./WatchIcon";
-
-export { WatchIcon };
+import { GreenTick } from "./GreenTick";
+import { CrossIcon } from "./CrossIcon";
+export { WatchIcon, GreenTick, CrossIcon };

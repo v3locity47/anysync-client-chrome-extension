@@ -1,3 +1,5 @@
+import { Notifications } from "./Notifications";
+
 export const RoomPage = () => {
-  return <div>Room</div>;
+  return <Notifications />;
 };
